@@ -1,0 +1,9 @@
+<div class="left">
+
+  <input type="text" placeholder="name" #name>
+  <input type="text" placeholder="url" #url>
+
+  <button (click)="addFavorite(name.value,url.value)">Add a Favorite Website</button>
+  <button (click)="updateFavorite(name.value,url.value)">Update a Favorite Website</button>
+
+</div>

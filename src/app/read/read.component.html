@@ -1,0 +1,10 @@
+<div class="right" *ngIf="favorites">
+
+  <h3>Favorites</h3>
+  <ul>
+    <li (click)="deleteFavorite(i)" *ngFor="let item of favorites | async; let i = index">
+      <a [href]="item.url" target="_blank">{{ item.name }}</a>
+    </li>
+  </ul>
+
+</div>

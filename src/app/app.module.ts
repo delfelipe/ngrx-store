@@ -1,14 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './reducers/favorite.reducer';
+
 import { AppComponent } from './app.component';
+import { ReadComponent } from './read/read.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReadComponent,
+    CreateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot({
+      favorite: reducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
